@@ -1,18 +1,28 @@
-import React from 'react'
+import React, { useContext } from "react";
 import './Service.css'
 import HeartEmoji from '../../img/heartemoji.png'
 import Glasses from '../../img/glasses.png'
 import Humble from '../../img/humble.png'
 import Card from '../Cards/Card'
+import { themeContext } from "../../Context";
+import { motion } from "framer-motion";
+
 import moncv from './moncv.pdf'
 const Service = () => {
+    const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+  const transition = {
+    duration: 1,
+    type: "spring",
+  };
     return (
         <div className='Services'>
             <div className="avesome">
-                <span>My Awsone</span>
+                <span style={{ color: darkMode ? "white" : "" }}>My Awsone</span>
                 <span>Services</span>
-                <span>I offer comprehensive full-stack web development solutions
-                    <br /> tailored to meet your specific business needs
+                <span>J'offre des solutions complètes de développement web full-stack 
+                <br />  adaptées pour répondre à vos besoins spécifiques en entreprise
+                    
                 </span>
 
                 <a href={moncv} download>
@@ -22,32 +32,44 @@ const Service = () => {
 
             </div>
             <div className="cards">
-                <div style={{ left: '14rem' }}>
+            <motion.div
+          initial={{ left: "25rem" }}
+          whileInView={{ left: "14rem" }}
+          transition={transition}
+        >
                     <Card
                         emoji={HeartEmoji}
                         heading={'Front-end'}
                         detail={"Html,Css,Javascript,React, Angularr,Bootstrap,Tailwind  "}
                     />
 
-                </div>
-                <div style={{ top: "12rem", left: '-4rem' }}>
+</motion.div>
+<motion.div
+          initial={{ left: "-11rem", top: "12rem" }}
+          whileInView={{ left: "-4rem" }}
+          transition={transition}
+        >
                     <Card
                         emoji={Glasses}
                         heading={'Back-end'}
                         detail={"Java,Php,Laravel,Spring boot,Uml, Merise,Sql,"}
                     />
 
-                </div>
-                <div style={{ top: "19rem", left: '12rem' }}>
+</motion.div>
+<motion.div
+          initial={{ top: "19rem", left: "25rem" }}
+          whileInView={{ left: "12rem" }}
+          transition={transition}
+        >
                     <Card
                         emoji={Humble}
                         heading={'coach'}
-                        detail={"Active and attentive teaching, fostering learning by doing"}
+                        detail={"Enseignement actif et attentif, favorisant l'apprentissage par la pratique (pédagogie active)."}
                     />
 
-                </div>
+</motion.div>
                 <div className="blur s-blur2" style={{ background: "var(--purple)" }}>
-                    
+
                 </div>
             </div>
         </div>
