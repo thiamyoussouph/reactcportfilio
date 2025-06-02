@@ -7,7 +7,7 @@ import Card from '../Cards/Card'
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 
-import moncv from './moncv.pdf'
+//import moncv from './moncv.pdf'
 const Service = () => {
     const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -25,7 +25,7 @@ const Service = () => {
                     
                 </span>
 
-                <a href={moncv} download>
+                <a href download>
                     <button className="button s-button">Dowload CV</button>
                 </a>
                 <div className="blur s-blur" style={{ background: "#abf1ff94" }}></div>
@@ -40,7 +40,7 @@ const Service = () => {
                     <Card
                         emoji={HeartEmoji}
                         heading={'Front-end'}
-                        detail={"Html,Css,Javascript,React, Angularr,Bootstrap,Tailwind  "}
+                        detail={"HTML5, CSS3, JavaScript (ES6+), React, Angular, Bootstrap, Tailwind CSS, Sass, Next.js, API REST, Responsive Design, Web Performance, SEO, Git"}
                     />
 
 </motion.div>
@@ -52,7 +52,7 @@ const Service = () => {
                     <Card
                         emoji={Glasses}
                         heading={'Back-end'}
-                        detail={"Java,Php,Laravel,Spring boot,Uml, Merise,Sql,"}
+                        detail={ "Java, PHP, Laravel, Spring Boot, |  UML, Merise,Base de données| Sécurité & Authentification : JWT, Auth API, API : RESTful API, MVC, API Documentation (Swagger)"}
                     />
 
 </motion.div>
@@ -64,7 +64,7 @@ const Service = () => {
                     <Card
                         emoji={Humble}
                         heading={'coach'}
-                        detail={"Enseignement actif et attentif, favorisant l'apprentissage par la pratique (pédagogie active)."}
+                        detail={ "Pédagogie active centrée sur l'apprenant : enseignement participatif, pratique, stimulant et orienté vers le développement de compétences concrètes."}
                     />
 
 </motion.div>

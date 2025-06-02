@@ -29,7 +29,8 @@ const Intro = () => {
                 <div className="i-name">
                     <span style={{ color: darkMode ? "white" : "" }}>hy !! i am </span>
                     <span>Youssouph Thiam</span>
-                    <span> Je suis un développeur full-stack, formateur, et j'accompagne les startups et les associations dans leur transformation digitale</span>
+                    <span> Développeur full-stack web & mobile, formateur et entrepreneur digital.
+J’accompagne startups, entreprises et associations dans leur transformation numérique en concevant des applications web et mobiles sur mesure</span>
                 </div>
                 <button className='button i-button'> Collaborons </button>
                 <div className="i-icons">

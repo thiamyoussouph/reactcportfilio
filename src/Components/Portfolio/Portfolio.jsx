@@ -6,6 +6,8 @@ import Sidbar from "../../img/sidebar.png"
 import Ecommerce from "../../img/ecommerce.png"
 import MusicApp from "../../img/musicapp.png"
 import Hoc from "../../img/hoc.png"
+import SBALY from "../../img/image1.png"
+import kiriku from "../../img/image.png"
 import { themeContext } from "../../Context";
 
 const Portfolio = () => {
@@ -22,6 +24,12 @@ const Portfolio = () => {
              slidesPerView={3}
              grabCursor={true}
              className="portfolio-slider">
+              <SwiperSlide>
+                    <img src={SBALY} alt="" height={190}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={kiriku} alt="" height={190}/>
+                </SwiperSlide>
                 <SwiperSlide>
                     <img src={Sidbar} alt="" />
                 </SwiperSlide>
@@ -34,6 +42,7 @@ const Portfolio = () => {
                 <SwiperSlide>
                     <img src={Hoc} alt="" height={190}/>
                 </SwiperSlide>
+               
             </Swiper>
 
 
